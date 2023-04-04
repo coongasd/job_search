@@ -1,0 +1,58 @@
+
+.App {
+  text-align: center;
+  background-image: url('https://www.topcv.vn/v4/image/welcome/linear_web.png');
+}
+
+*{
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black!important;
+  font-size: 30px !important;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.slick-next{
+  right: 200px !important;
+  top: 0 !important;
+}
+.slick-prev{
+  top: 0 !important;
+  left:-49px !important;
+}
+.slick-dots{
+  display:none !important;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*------------------------------------------------------*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+

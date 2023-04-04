@@ -1,0 +1,669 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    background-color: #f1f2f6;
+    
+}
+
+.noti {
+    height: 40px;
+    padding: 12px 0;
+    background-color: #e43a45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noti p, a {
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.noti a {
+   padding-left: 5px;
+}
+
+nav {
+    background-color: #fff;
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_links {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    height: 75px;
+    background-color: #fff;
+    align-items: center;
+}
+
+.nav_links li {
+    padding: 15px ;
+    list-style: none;
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+   
+}
+
+.nav_links li:hover .subnav_list, .nav_links li:hover .subnav_list_avatar{
+    display: block;
+}
+
+.nav_links li:hover .subnav_img{
+    display: block;
+}
+
+.nav_links li:hover {
+    background-color:  #f1f2f6;
+}
+
+.nav_links li img {
+   top: 30px;
+   height: 40px;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    color: #333333;
+}
+.nav_links li a:hover, .nav_links .subnav_list li:hover, .nav_links .subnav_list_avatar li:hover {
+    color: #00b14f;
+}
+
+.nav_links .subnav {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 10px rgb(0, 0, 0) ;
+    z-index: 2;
+}
+
+.nav_links .subnav_list {
+    position: absolute;
+    left: -5px;
+    top: 75px;
+    min-width: 400px;
+    background-color: #fff;   
+    padding: 20px;
+    border-top-left-radius: 5px;
+    display: none;
+    z-index: 2;
+}
+
+.nav_links .subnav_list_avatar {
+    position: absolute;
+    left: -250px;
+    top: 75px;
+    min-width: 400px;
+    background-color: #fff;   
+    padding: 20px;
+    border-top-left-radius: 5px;
+    display: none;
+    z-index: 2;
+    text-align: left;
+}
+
+.nav_links .subnav_list::before, .nav_links .subnav_list_avatar::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -25px;
+    min-width: 400px;
+    padding: 20px;
+}
+
+.nav_links .subnav_img {
+   display: none;
+   position: absolute;
+   min-width: 400px;
+   top: 75px;
+   left: 395px;
+   border-top-right-radius: 5px;
+   z-index: 2;
+}
+
+.nav_links .subnav_img img {
+    min-width: 440px;
+    height: 390px;
+}
+
+.nav_links .nav_links_image {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+}
+
+.nav_links .nav_links_image p {
+    padding: 0 5px;
+}
+
+.nav_links .nav_links_image img {
+    border-radius: 50%;
+}
+
+.nav_links .name_user {
+    background: rgb(250, 248, 248);
+    border-radius: 25px;
+}
+
+.subnav_list_avatar .items_icons_text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.items_icons_text p {
+    display: block;
+    padding-left:10px ;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+
+}
+
+.wrapper .navigation {
+    width: 80px;
+    min-height: 200px;
+    background:rgb(238, 164, 164);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -20px 20px 50px rgba(0, 0, 0, 0);
+    transition: 0.5s;
+}
+
+.navigation.active {
+    width: 400px;
+}
+
+.navigation .menu_toggle {
+    left: 15px;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    
+}
+
+.navigation .menu_toggle::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background: #333;
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.navigation .menu_toggle::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background: #333;
+    transform: translateY(10px);
+    transition: 0.5s;
+    box-shadow: 0 -10px #333;
+}
+
+.navigation.active .menu_toggle::before {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+.navigation.active .menu_toggle::after {
+    transform: translateY(-10px) rotate(45deg);
+    box-shadow: 0 0 #333;
+}
+
+.container {
+  
+}
+
+/*------------------------------------------Manager_CV CSS--------------------------------------------------*/
+.Manager_CV_Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.Manager_CV_Container .Manager_CV_BoxLeft {
+    width:800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Manager_CV_Container .Manager_CV_BoxRight{
+    height: 600px;
+    width: 350px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    z-index: 1;
+}
+
+.Manager_CV_Items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: -3px 3px 10px #333;
+}
+
+
+.Manager_CV_Items .Banner_Image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.Manager_CV_Items .Text_Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 75px;
+}
+
+.Manager_CV_Items .Text_Button h1 {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color:#333;
+}
+
+.Manager_CV_Items .Text_Button button {
+    
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 32px;
+    background-color: #00b14f;
+    margin-top: 20px;
+}
+
+.Manager_CV_Items .Text_Button button:hover {
+    background-color: #4fc986;
+}
+
+.Manager_CV_Items .Text_Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Manager_CV_Items .Text_Image p {
+    color: #333;
+    margin-top: 20px;
+}
+
+
+.Manager_CV_BoxRight .Manager_CV_BoxTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.Manager_CV_BoxRight .Manager_CV_BoxBottom {
+    
+    
+}
+
+.Manager_CV_BoxTop .BoxTop_Avatar {
+    padding: 15px 15px;
+}
+.Manager_CV_BoxTop .BoxTop_Avatar img {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+}
+.Manager_CV_BoxTop a{
+    position: absolute;
+    left: 8px;
+    top: 95px;
+    width: 100px;
+    padding-top:10px ;
+    display: block;
+    font-size: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Manager_CV_BoxTop .BoxTop_Text_Button {
+    position: absolute;
+    color:rgb(0, 0, 0);
+    padding: 15px;
+    top: 8px;
+    left: 100px;
+}
+
+.BoxTop_Text_Button h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Manager_CV_BoxTop .BoxRight_Button {
+    width: 135px;
+    margin: 15px;
+    font-size: 10px;
+    font-weight: 100;
+    background-color: #00b14f;
+}
+
+.Manager_CV_BoxTop .BoxRight_Button:hover {
+    background-color: #4fc986;
+}
+
+.Manager_CV_BoxTop .BoxRight_CheckBox {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 70px;
+    width: 5px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+
+}
+
+input[type='checkbox'] {
+   position: absolute;
+   left: 8px;
+   -webkit-appearance: none;
+}
+
+.BoxRight_CheckBox .check {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #092c3e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+input[type='checkbox']:checked {
+    background: #68df9d;
+}
+
+.BoxRight_CheckBox .check::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: rgb(247, 0, 0);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+input[type='checkbox']:checked::before {
+    transform: translateX(-50px);
+}
+
+.BoxRight_CheckBox .check::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    background:  #092c3e;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+input[type='checkbox']:checked::after {
+    transform: translateX(0px);
+}
+
+.BoxRight_CheckBox .checkbox_text  {
+   position: absolute;
+   width: 250px;
+   left: 50px;
+   color: red;
+   font-size: 15px;
+   font-weight: 900;
+   
+}
+
+.BoxRight_CheckBox .text_description {
+    position: absolute;
+    left: 10px;
+    width: 300px;
+    color: rgb(61, 58, 58);
+    font-size: 12px;
+    font-weight: 300;
+    top: 40px;
+    text-align: left;
+}
+
+.Manager_CV_Items_Company {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: -3px 3px 10px #333;
+    text-align: left;
+    padding: 16px 16px;
+}
+
+.Manager_CV_Items_Company h1 {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+    padding: initial;
+}
+
+.Manager_CV_Items_Company a {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+    padding: initial;
+    color: #00b14f;
+}
+
+.Manager_CV_Items_Company p {
+    font-size: 14px;
+}
+
+
+.Manager_CV_Items_Company .Company_Items{
+    display: flex;
+    flex-direction: column ;
+    background: #f2fbf6;
+    padding: 16px 0;
+    margin: 14px 0;
+}
+
+.Company_Items .Company_Description {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.Company_Items .Company_Description img {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+}
+
+.Company_Items .Company_Description a {
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.Company_Items .Company_Description a:nth-child(2) {
+    font-size: 14px;
+    color: #666;
+}
+
+.Company_Items .Company_Description p{
+    padding: 10px;
+}
+
+.Company_Description .Cv_Apply_State a {
+    background: #5ae297;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 100px;
+}
+
+.Company_Description .Cv_Apply_State a:hover {
+    background: #bbebd0;
+}
+
+.Company_Description .Company_Link {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.Company_Items .Company_State {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Company_Items .Company_State p {
+    background: #eee;
+    border-radius: 3px;
+    color: #636d78;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-right: 10px;
+    padding: 4px 8px;
+}
+
+/*=====================================search_header============================*/
+.search_header {
+    border-top: solid 1px rgb(204, 201, 201) ;
+    position: relative;
+    top: -22px;
+}
+
+.search_header form{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search_header button {
+    background: #00b14f;
+    margin: 0 0;
+}
+
+.search_header input {
+    width: 400px;
+    padding: 20px 5px;
+    height: 15px;
+    outline: #00b14f;
+}
+
+.search_header input:hover, .search_header select:hover {
+    border: solid 2px #00b14f;
+}
+
+.search_header .search_item {
+    margin: 0 10px;
+    height: 40px;
+    border-radius: 5px;
+    border:  solid 1px rgb(204, 201, 201);
+}
+
+/*--------------------------------------------------Company_Wrapper------------------------------------*/
+.Company_Wrapper {
+    height: 500px;
+    background: #4fc986;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Company_Wrapper .box_header_company {
+    width: calc(100% - 200px);
+    height: 150px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Company_Wrapper .box_info_job {
+    width: calc(100% - 200px);
+    height: 150px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.job_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.job_title .company_image {
+    width: 100px;
+    height: 100px;
+    border: solid #ccc 1px;
+    border-radius: 60px;
+    margin: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.job_title .company_image img {
+    width: 75%;
+    max-height: 100%;
+    display: block;
+    position:absolute;
+    top: 30px;
+    left: 15px;
+}
